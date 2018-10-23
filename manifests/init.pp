@@ -29,6 +29,7 @@ class elasticpatch(Array $instances) {
     }
 
     file { '/root/elastic-postconf.txt':
+        ensure  => present,
         content => "filebeat setup --dashboards\n"
     }
 
